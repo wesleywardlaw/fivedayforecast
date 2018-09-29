@@ -1,0 +1,40 @@
+{
+  "name": "weather",
+  "version": "1.0.0",
+  "description": "five day weather forecast using openweather API",
+  "main": "index.js",
+  "repository": "somewhere.git",
+  "scripts": {
+    "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --host 0.0.0.0 --mode=development",
+    "test:watch": "npm run test -- --watch",
+    "start": "node server.js",
+    "build": "SET NODE_ENV=production&&webpack -p"
+  },
+  "author": "",
+  "license": "MIT",
+  "babel-loader": {
+    "presets": [
+      "env",
+      "react"
+    ]
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.9"
+  },
+  "dependencies": {
+    "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "ajv": "^6.5.4",
+    "axios": "^0.9.1",
+    "babel-loader": "^8.0.4",
+    "cors": "^2.8.4",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-redux": "^4.4.9",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.3.0",
+    "webpack": "^4.20.2"
+  }
+}
