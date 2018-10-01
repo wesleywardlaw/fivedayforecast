@@ -17,26 +17,24 @@ In the client folder, run:
 
 ```
 npm install
-```
-If you are on Windows, you may get some warnings about optional dependencies for fsevents.  To remove these warnings, run:
-```
-npm audit fix --force
-```
-
-Then to start the client, run:
-
-```
 npm run dev
 
 ```
 
 You should now be able to view the project on http://localhost:8080.
 
-To build the bundle for the dist folder, run:
+To build the bundle for the dist folder:
 
 ```
 npm run build
 ```
+
+Then you will need to either manually move the index.html file and style folder into the distribution folder, or do it via the command line.  On Windows, this can be done with:
+
+```
+copy index.html dist
+mkdir dist\style
+copy style\style.css dist\style
 
 ## Deployed Example
 
