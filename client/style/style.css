@@ -1,0 +1,72 @@
+h1{
+	text-align: center;
+	font-family: Verdana, sans-serif;	
+}
+
+h2{
+	font-family: Verdana, sans-serif;
+}
+
+.name{
+	text-align:center;
+}
+
+.card{
+	display:inline-block;
+	width: 20%;
+	text-align:center;
+	
+	
+}
+
+.cards{
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+body{
+	margin: 5%;
+}
+
+.dataButtons{
+	margin: 0 auto;
+	width: 50%;
+}
+
+.dataButtons button{
+	width: 29.33%;
+	margin: 2%;
+	border-radius: 10px;
+	color: white;
+	background-color: rgb(24, 24, 141);
+	font-weight: bold;
+	border: 1px solid rgb(151, 151, 151);
+	padding:0px;
+}
+
+.dataButtons button:focus, .tempScale button:focus{
+	box-shadow: 0 0 3px rgb(151,151,151);
+	outline:0;
+}
+
+
+.dataButtons .selected, .tempScale .selected{
+	color: rgb(23,24,141);
+	background-color:white;
+}
+
+
+.tempScale{
+	margin: 0 auto;
+	width: 20%;
+}
+
+.tempScale button{
+	font-weight: bold;
+	color: white;
+	background-color: rgb(24, 24, 141);
+	border: 1px solid rgb(151, 151, 151);
+	margin: 5px;
+	border-radius: 10px;
+}
+
