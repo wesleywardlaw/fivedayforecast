@@ -43,6 +43,7 @@ Then you will need to either manually move the index.html file and style folder 
 copy index.html dist
 mkdir dist\style
 copy style\style.css dist\style
+```
 
 ## Deployed Example
 
