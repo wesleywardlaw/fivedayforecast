@@ -1,11 +1,11 @@
 var webpack = require('webpack');
 
 var config = {
-  entry: [
-    './src/index.js'
-  ],
+  entry: {
+    index: './src/index.js'
+  },
   output: {
-    path: __dirname,
+    path: __dirname+'/dist',
     publicPath: '/',
     filename: 'bundle.js'
   },
@@ -32,6 +32,7 @@ var config = {
     contentBase: './',
     disableHostCheck: true
   },
+  performance: { hints: false },
   plugins: [
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),

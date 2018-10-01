@@ -9,23 +9,17 @@ import Weather from './components/weather';
 const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
 const store = createStoreWithMiddleware(reducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
-
-//Create a new component. This component should produce some html.
 class App extends Component {
   render(){
 	  return(
 		  <Weather />
 	  )
   }
-
-
 }
 
 ReactDOM.render(
 	<Provider store={store}>
 		<App />
-
-
 	</Provider>, document.querySelector('.container')
 );
 

@@ -1,21 +1,26 @@
 import axios from 'axios';
 import { GET_WEATHER } from './types';
 
-const ROOT_URL = 'http://localhost:3000'
 
-var lat;
-var lon;
+//use different server depending on environment
+let ROOT_URL = '';
+if (process.env.NODE_ENV == undefined) {
+	ROOT_URL = 'http://localhost:3000'
+} else {
+	ROOT_URL = ''
+}
 
+var lat, lon;
+
+//get geolocation
 function geoFindMe(callback) {
-
-	if (!navigator.geolocation){
+	if (!navigator.geolocation) {
 		callback();
-	  }
+	}
 
 	function success(position) {
 		lat = position.coords.latitude;
 		lon = position.coords.longitude;
-
 		callback();
 	}
 
@@ -23,38 +28,22 @@ function geoFindMe(callback) {
 		callback();
 	}
 
-
-
-
 	navigator.geolocation.getCurrentPosition(success, error);
-
 }
 
-
-
-export function getWeatherFromIP(units, callback) {
-
+export function getWeather(units, callback) {
 	return function (dispatch) {
 		geoFindMe(function () {
-			console.log(lat);
-			console.log(lon);
-
 			axios.post(`${ROOT_URL}/weather`, { units, lat, lon })
 				.then(response => {
-					console.log(response.data);
 					dispatch({
 						type: GET_WEATHER,
 						payload: response.data
-
 					});
-
 					callback();
 				});
-
 		})
 	}
-
 }
-
 
 
