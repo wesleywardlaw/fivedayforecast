@@ -7,13 +7,9 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const dotenv = require('dotenv').config();
 
-
-
-// app.use(express.static(__dirname));
 app.use(cors());
 app.use(bodyParser.json({type:"*/*"}));
 app.post('/weather', (req,res) => {
-	// console.log(req.body);
 	var lat = req.body.lat;
 	var lon = req.body.lon;
 	var units = req.body.units;
@@ -21,8 +17,6 @@ app.post('/weather', (req,res) => {
 	if(lat!==undefined&&lon!==undefined){
 		axios.get(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${process.env.WEATHER}&units=${units}`)
 			.then(response => {
-				// console.log(response);
-				// console.log(response.data);
 				res.send(response.data);
 			})
 			.catch((err)=>res.send({err:"We are unable to retreive weather information at this time."}))
@@ -36,23 +30,12 @@ app.post('/weather', (req,res) => {
 			
 			axios.get(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${process.env.WEATHER}&units=${units}`)
 				.then(response => {
-					// console.log(response);
-					// console.log(response.data);
 					res.send(response.data);
 				})
 				.catch((err)=>res.send({err:"We are unable to retreive weather information at this time."}))
-			
-			// callback(response.data.tax);
 		})
-	}
-	
-		
-		
+	}					
 });
-
-// app.get("*", (req,res) =>{
-// 	res.sendFile(path.resolve(__dirname, 'index.html'));
-// });
 
 app.listen(port);
 

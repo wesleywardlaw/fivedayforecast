@@ -7,7 +7,7 @@ let ROOT_URL = '';
 if (process.env.NODE_ENV == undefined) {
 	ROOT_URL = 'http://localhost:3000'
 } else {
-	ROOT_URL = ''
+	ROOT_URL = 'https://fivedayforecastserver.herokuapp.com'
 }
 
 var lat, lon;

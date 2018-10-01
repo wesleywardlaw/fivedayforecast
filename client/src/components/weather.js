@@ -78,7 +78,7 @@ class Weather extends Component {
                         })}
                     </div>
                     <div className="tempScale">
-                        <button className={(this.state.units === "imperial") ? "selected" : ''} onClick={() => { if (this.state.units === "metric") { this.convertTemps() } }}>Farenheit</button>
+                        <button className={(this.state.units === "imperial") ? "selected" : ''} onClick={() => { if (this.state.units === "metric") { this.convertTemps() } }}>Fahrenheit</button>
                         <button className={(this.state.units === "metric") ? "selected" : ''} onClick={() => { if (this.state.units === "imperial") { this.convertTemps() } }}>Celsius</button>
                     </div>
                     <div className="dataButtons">
