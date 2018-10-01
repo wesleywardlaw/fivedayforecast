@@ -29,7 +29,7 @@ To build the bundle for the dist folder:
 npm run build
 ```
 
-Then you will need to either manually move the index.html file and style folder into the distribution folder, or do it via the command line.  On Windows, this can be done with:
+Then you will need to either manually copy the index.html file and style folder into the distribution folder, or do it via the command line.  On Windows, this can be done with:
 
 ```
 copy index.html dist
