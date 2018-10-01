@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Five Day ForeCast Server",
   "main": "server.js",
-  "repository": "somewhere.git",
+  "repository": "https://github.com/wesleywardlaw/fivedayforecast.git",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
