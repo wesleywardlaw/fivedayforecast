@@ -61,5 +61,5 @@ I considered implementing a search function, but my experiments with OpenWeather
 
 ## With More Time
 
-With more time, I would implement some kind of testing, probably using Jest and Enzyme.  It might also be nice to have a component that pulled up the location on Google Maps.  I could also add Kelvin as an option.
+With more time, I would implement some kind of testing, probably using Jest and Enzyme.  It might also be nice to have a component that pulled up the location on Google Maps.  I could also add Kelvin as an option.   
 
