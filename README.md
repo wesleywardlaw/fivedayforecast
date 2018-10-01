@@ -17,6 +17,15 @@ In the client folder, run:
 
 ```
 npm install
+```
+If you are on Windows, you may get some warnings about optional dependencies for fsevents.  To remove these warnings, run:
+```
+npm audit fix --force
+```
+
+Then to start the client, run:
+
+```
 npm run dev
 
 ```

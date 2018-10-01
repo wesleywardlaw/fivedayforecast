@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "five day weather forecast using openweather API",
   "main": "index.js",
-  "repository": "somewhere.git",
+  "repository": "https://github.com/wesleywardlaw/fivedayforecast.git",
   "scripts": {
     "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --host 0.0.0.0 --mode=development",
     "test:watch": "npm run test -- --watch",
