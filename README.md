@@ -2,7 +2,7 @@
 
 ## How to Run
 
-In the server folder, first create a .env file and insert the following code, replacing yourapikey with a key from OpenWeatherMap:
+In the server folder, first create a .env file and insert the following code, replacing yourapikey with a key from [OpenWeatherMap](https://openweathermap.org/api):
 ```
 WEATHER=yourapikey
 ```
