@@ -37,12 +37,13 @@ To build the bundle for the dist folder:
 npm run build
 ```
 
-Then you will need to either manually move the index.html file and style folder into the distribution folder, or do it via the command line.  On Windows, this can be done with:
+Then you will need to either manually move the index.html file,style folder, and ico.png into the distribution folder, or do it via the command line.  On Windows, this can be done with:
 
 ```
 copy index.html dist
 mkdir dist\style
 copy style\style.css dist\style
+copy ico.png dist
 ```
 
 ## Deployed Example
